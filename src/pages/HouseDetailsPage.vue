@@ -2,7 +2,7 @@
     <div class="house-details">
 <h1>{{ state.house.bathrooms }} | {{ state.house.bedrooms }} details</h1>
     <img src="" alt="" />
-    <button type="button" class="btn btn-outline-danger" @click="deletehouse">
+    <button type="button" class="btn btn-outline-danger" @click="deleteHouse">
       Delete house
     </button>
     <div class="row my-3">

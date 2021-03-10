@@ -1,7 +1,7 @@
 <template>
   <div class="car-details">
-    <h1>WElcome to the details page</h1>
-    {{ state.car }}
+    <h1>{{ state.car.make }} | {{ state.car.model }} details</h1>
+    <img src="" alt="" />
     <button type="button" class="btn btn-outline-danger" @click="deleteCar">
       Delete Car
     </button>

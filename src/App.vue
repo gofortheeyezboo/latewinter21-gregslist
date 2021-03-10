@@ -14,7 +14,7 @@
     <main>
       <router-view />
     </main>
-    <footer class="container-fluid bg-primary text-light">
+    <footer class="container-fluid bg-info text-light">
       <div class="row">
         <div class="col text-center">
           <p class="m-3">

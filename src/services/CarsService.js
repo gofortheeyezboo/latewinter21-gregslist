@@ -11,10 +11,20 @@ class CarsService {
     }
   }
 
+  async getCar(id) {
+    try {
+      const res = await sandboxApi.get('cars/' + id)
+      AppState.activeCar = res.data
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   async createCar(rawCar) {
     try {
       const res = await sandboxApi.post('cars', rawCar)
       AppState.cars.push(res.data)
+      return res.data._id
     } catch (error) {
       console.error(error)
     }

@@ -1,30 +1,47 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="app">
+    <header class="container-fluid bg-info text-light">
+      <div class="row">
+        <div class="col text-center">
+          <h1>Gregslist</h1>
+          <div class="text-light">
+            <router-link :to="{name: 'Home'}">Home</router-link> |
+            <router-link :to="{name: 'Cars'}">Cars</router-link>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <router-view />
+    </main>
+    <footer class="container-fluid bg-primary text-light">
+      <div class="row">
+        <div class="col text-center">
+          <p class="m-3">
+            Made with <img alt="Vue logo" src="./assets/logo.png" /> by
+            codeworks
+          </p>
+        </div>
+      </div>
+    </footer>
   </div>
-  <router-view/>
 </template>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-#nav {
-  padding: 30px;
+main {
+  flex-grow: 1;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+footer img {
+  width: 1em;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+a {
+  color: white;
 }
 </style>

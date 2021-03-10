@@ -14,6 +14,7 @@ class HousesService {
   async getHouse(id) {
     try {
       const res = await sandboxApi.get('houses/' + id)
+      console.log(res)
       AppState.activehouse = res.data
     } catch (error) {
       console.error(error)

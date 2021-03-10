@@ -5,13 +5,8 @@
     <button type="button" class="btn btn-outline-danger" @click="deletehouse">
       Delete house
     </button>
-    <div class="row">
-      <div class="col text-center">
-        <h1>Houses</h1>
-      </div>
-    </div>
     <div class="row my-3">
-      <form class="form-inline" @submit.prevent="createHouse">
+      <form class="form-inline" onsubmit="app.housesController.createHouse(event)">
         <div class="form-group">
           <input
             type="number"
